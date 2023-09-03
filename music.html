@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaden's Music Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Recommended Music</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="genre">Indie:</div>
+    <ul>
+        <li>
+            <div class="album-container">
+                <div class="album-content">
+                    <div class="details">
+                        <a href="https://open.spotify.com/album/2v9Eny0s7E50ugTiFlCuUF" target="_blank"
+                            rel="noopener">Heady</a>
+                        <span class="spacing">by</span>
+                        <a href="https://www.onestowatch.com/en/blog/reaper-is-the-anti-hero-indie-needs"
+                            target="_blank" rel="noopener">Reaper</a>
+                    </div>
+                    <div class="album-embed">
+                        <iframe width="50%" height="100" scrolling="no" frameborder="no" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1111453132&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <div
+                            style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                            <a href="https://soundcloud.com/user-9114535" title="Rachel" target="_blank"
+                                style="color: #cccccc; text-decoration: none;">Rachel</a> · <a
+                                href="https://soundcloud.com/user-9114535/heady-reaper-1" title="Heady - Reaper"
+                                target="_blank" style="color: #cccccc; text-decoration: none;">Heady - Reaper</a></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="genre">Soul:</div>
+    <ul>
+        <li>
+            <div class="album-container">
+                <div class="album-content">
+                    <div class="details">
+                        <a href="https://www.discogs.com/master/1148987-Nick-Hakim-Where-Will-We-Go-Part-1-2"
+                            target="_blank" rel="noopener">Where Will We Go Part 1 & 2</a>
+                        <span class="spacing">by</span>
+                        <a href="https://en.wikipedia.org/wiki/Nick_Hakim" target="_blank" rel="noopener">Nick Hakim</a>
+                    </div>
+                    <div class="album-embed">
+                        <iframe width="50%" height="100" scrolling="no" frameborder="no" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1202208205&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <div
+                            style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                            <a href="https://soundcloud.com/enhakim" title="NickHakim" target="_blank"
+                                style="color: #cccccc; text-decoration: none;">NickHakim</a> · <a
+                                href="https://soundcloud.com/enhakim/sets/where-will-we-go-pt-1"
+                                title="Where Will We Go, Pt. 1" target="_blank"
+                                style="color: #cccccc; text-decoration: none;">Where Will We Go, Pt. 1</a></div>
+                        <iframe width="50%" height="100" scrolling="no" frameborder="no" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1202208619&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <div
+                            style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                            <a href="https://soundcloud.com/enhakim" title="NickHakim" target="_blank"
+                                style="color: #cccccc; text-decoration: none;">NickHakim</a> · <a
+                                href="https://soundcloud.com/enhakim/sets/where-will-we-go-pt-2"
+                                title="Where Will We Go, Pt. 2" target="_blank"
+                                style="color: #cccccc; text-decoration: none;">Where Will We Go, Pt. 2</a></div>
+                    </div>
+                </div>
+                <button class="summary-button tooltip" onclick="loadSummary('Nick_Hakim')">Show Summaries
+                    <span class="tooltiptext">Click to load summaries</span>
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div id="fixed-tooltip" class="fixed-tooltip">
+        <div id="tooltip-content">Click Show Summaries for more info</div>
+        <span class="close-button" onclick="closeTooltip()">&times;</span>
+    </div>
+</body>
+
+</html>

@@ -1,63 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Jaden's Website</title>
-        <link rel="stylesheet" href="styles.css">
-        <script>
-            async function fetchWikiSummary(title, elementId) {
-                const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${title}`;
-                const response = await fetch(url);
-                const data = await response.json();
-                document.getElementById(elementId).innerText = data.extract;
-            }
-        </script>
-    </head>
-    <body>
-        <header>
-            <h1>Jaden's Recommendations and Ideas</h1>
-        </header>
-        
-        <section>
-            <h2>Good Books</h2>
-            <div class="genre">Science Fiction:</div>
-            <ul>
-                <li>
-                    <div class="details tooltip" onmouseover="fetchWikiSummary('Dune_(novel)', 'tooltip-dune')">
-                        <a href="https://en.wikipedia.org/wiki/Dune_(novel)" target="_blank" rel="noopener">Dune</a>
-                        <span class="tooltiptext" id="tooltip-dune">Loading...</span>
-                        <span>by <a href="https://en.wikipedia.org/wiki/Frank_Herbert">Frank Herbert</a></span>
-                    </div>
-                </li>
-                <li>
-                    <div class="details">
-                        <a href="https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)" target="_blank" rel="noopener">The Three Body Problem</a>
-                        <span>by <a href="https://en.wikipedia.org/wiki/Liu_Cixin">Liu Cixin</a></span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Good Albums</h2>
-            <div class="genre">Indie:</div>
-            <ul>
-                <li>
-                    <div class="details">
-                        <a href="https://open.spotify.com/album/2v9Eny0s7E50ugTiFlCuUF" target="_blank" rel="noopener">Heady</a>
-                        <span>by <a href="https://www.onestowatch.com/en/blog/reaper-is-the-anti-hero-indie-needs">Reaper</a></span>
-                    </div>
-                </li>
-            </ul>
-            <div class="genre">Soul:</div>
-            <ul>
-                <li>
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/1148987-Nick-Hakim-Where-Will-We-Go-Part-1-2" target="_blank" rel="noopener">Where Will We Go Part 1 & 2</a>
-                        <span>by <a href="https://en.wikipedia.org/wiki/Nick_Hakim">Nick Hakim</a></span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Jaden's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Jaden's Recommendations</h1>
+    <nav>
+        <ul>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="music.html">Music</a></li>
+        </ul>
+    </nav>
+</header>
+</body>
 </html>

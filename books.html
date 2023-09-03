@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jaden's Book Recommendations</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+<body>
+    <header>
+        <h1>Recommended Books</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="genre">
+        <h3>Science Fiction</h3>
+        <ul>
+            <li class="book-item">
+                <a class="book-title tooltip" href="https://en.wikipedia.org/wiki/Dune_(novel)" target="_blank"
+                    rel="noopener" data-title="Dune_(novel)">Dune</a>
+                <span class="author-label">by</span>
+                <a class="author-name tooltip" href="https://en.wikipedia.org/wiki/Frank_Herbert" target="_blank"
+                    rel="noopener" data-title="Frank_Herbert">Frank Herbert</a>
+                <button class="summary-button" onclick="loadSummary('Dune_(novel)', 'Frank_Herbert')">Show
+                    Summaries</button>
+            </li>
+            <li class="book-item">
+                <a class="book-title tooltip" href="https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+                    target="_blank" rel="noopener" data-title="The_Three-Body_Problem_(novel)">The Three Body
+                    Problem</a>
+                <span class="author-label">by</span>
+                <a class="author-name tooltip" href="https://en.wikipedia.org/wiki/Liu_Cixin" target="_blank"
+                    rel="noopener" data-title="Liu_Cixin">Liu Cixin</a>
+                <button class="summary-button"
+                    onclick="loadSummary('The_Three-Body_Problem_(novel)', 'Liu_Cixin')">Show Summaries</button>
+            </li>
+        </ul>
+    </article>
+    <article class="genre">
+        <h3>Technology and Society</h3>
+        <ul>
+            <li class="book-item">
+                <a class="book-title tooltip" href="https://www.google.com/books/edition/Tools_and_Weapons/WeJsxQEACAAJ?hl=en" target="_blank"
+                    rel="noopener" data-title="Tools_and_Weapons">Tools and Weapons</a>
+                <span class="author-label">by</span>
+                <a class="author-name tooltip" href="https://en.wikipedia.org/wiki/Brad_Smith_(American_lawyer)" target="_blank"
+                    rel="noopener" data-title="Brad_Smith">Brad Smith</a> <span class="author-label">&</span>
+                <a class="author-name tooltip" href="https://twitter.com/carolannbrowne?lang=en" target="_blank"
+                    rel="noopener" data-title="Carol_Ann_Browne">Carol Ann Browne</a>
+            </li>
+        </ul>
+    </article>    
+    <div id="fixed-tooltip" class="fixed-tooltip">
+        <div id="tooltip-content">Click Show Summaries for more info</div>
+        <span class="close-button" onclick="closeTooltip()">&times;</span>
+    </div>
+</body>
+</html>

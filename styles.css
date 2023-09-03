@@ -17,10 +17,20 @@ a:hover {
     font-weight: bold;
     margin-top: 10px;
 }
-.details {
+.book-item {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
+.book-title, .author-name {
+    margin-right: 5px;
+}
+.author-label {
+    margin: 0 5px; /* Adds spacing around 'by' */
+}
+.summary-button {
+    margin-left: auto; /* Pushes the button to the right */
+}
+
 /* Tooltip styles */
 .tooltip {
     position: relative;
@@ -41,4 +51,34 @@ a:hover {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+.fixed-tooltip {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px 0 0 0;
+    border: 2px solid #444;  /* New border */
+}
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.album-details, .album-embed {
+    align-self: flex-start;
+}
+
+.summary-button {
+    align-self: flex-end;
 }

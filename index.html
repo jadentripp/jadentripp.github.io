@@ -4,6 +4,14 @@
         <meta charset="UTF-8">
         <title>Jaden's Website</title>
         <link rel="stylesheet" href="styles.css">
+        <script>
+            async function fetchWikiSummary(title, elementId) {
+                const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${title}`;
+                const response = await fetch(url);
+                const data = await response.json();
+                document.getElementById(elementId).innerText = data.extract;
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -15,11 +23,9 @@
             <div class="genre">Science Fiction:</div>
             <ul>
                 <li>
-                    <div class="details">
-                        <span class="tooltip">
-                            <a href="https://en.wikipedia.org/wiki/Dune_(novel)" target="_blank" rel="noopener">Dune</a>
-                            <span class="tooltiptext">A sci-fi classic about politics and power.</span>
-                        </span>
+                    <div class="details tooltip" onmouseover="fetchWikiSummary('Dune_(novel)', 'tooltip-dune')">
+                        <a href="https://en.wikipedia.org/wiki/Dune_(novel)" target="_blank" rel="noopener">Dune</a>
+                        <span class="tooltiptext" id="tooltip-dune">Loading...</span>
                         <span>by <a href="https://en.wikipedia.org/wiki/Frank_Herbert">Frank Herbert</a></span>
                     </div>
                 </li>

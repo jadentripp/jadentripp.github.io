@@ -17,3 +17,7 @@ a:hover {
     font-weight: bold;
     margin-top: 10px;
 }
+.details {
+    display: flex;
+    justify-content: space-between;
+}

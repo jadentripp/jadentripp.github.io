@@ -21,6 +21,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
 }
+/* Tooltip styles */
 .tooltip {
     position: relative;
     display: inline-block;
@@ -35,7 +36,7 @@ a:hover {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 100%; 
+    bottom: 125%; 
     left: 50%; 
     margin-left: -100px;
     opacity: 0;

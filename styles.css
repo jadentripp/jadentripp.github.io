@@ -13,3 +13,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.genre {
+    font-weight: bold;
+    margin-top: 10px;
+}

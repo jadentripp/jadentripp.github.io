@@ -24,9 +24,8 @@ a:hover {
 /* Tooltip styles */
 .tooltip {
     position: relative;
-    display: inline-block;
 }
-.tooltip .tooltiptext {
+.tooltiptext {
     visibility: hidden;
     width: 200px;
     background-color: #555;
@@ -36,9 +35,6 @@ a:hover {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; 
-    left: 50%; 
-    margin-left: -100px;
     opacity: 0;
     transition: opacity 0.3s;
 }

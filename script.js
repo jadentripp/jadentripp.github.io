@@ -9,7 +9,7 @@ function loadSummary(title1, title2) {
             .then(summary1 => {
                 return fetchWikiSummary(title2)
                     .then(summary2 => {
-                        contentDiv.innerText = `Book: ${summary1}\n\nAuthor: ${summary2}`;
+                        contentDiv.innerText = `${summary1}\n\n${summary2}`;
                     });
             });
     } else {

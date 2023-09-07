@@ -1,0 +1,188 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #333;
+    --background-color: #f0f0f0;
+    --border-color: #f1f1f1;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family: 'Helvetica, Arial, sans-serif';
+    --tooltip-bg-color: rgba(0, 0, 0, 0.8);
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--secondary-color);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.article {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.article h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.book-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.book-details {
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+}
+
+.book-title, .author-name {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.book-title:hover, .author-name:hover {
+    color: var(--primary-color);
+}
+
+.summary-button {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.summary-button:hover,
+.summary-button:focus {
+    background-color: #0056b3;
+}
+
+/* .tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: var(--tooltip-bg-color);
+    color: #fff;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    pointer-events: none;
+    font-size: 14px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+} */
+
+@media (min-width: 600px) {
+    .book-item {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+#fixed-tooltip {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+#fixed-tooltip.display-block {
+    display: block;
+}
+
+#tooltip-content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-button:hover {
+    color: #333;
+}

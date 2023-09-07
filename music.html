@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jaden's Music Recommendations across various genres including Indie, Soul, Hip-Hop, and more.">
+    <meta name="keywords" content="Music Recommendations, Indie, Soul, Hip-Hop, Jaden's Picks">
     <title>Jaden's Music Recommendations</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="music.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -20,328 +23,471 @@
             </ul>
         </nav>
     </header>
-    <h2 class="genre">Indie:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://open.spotify.com/album/2v9Eny0s7E50ugTiFlCuUF" target="_blank"
-                            rel="noopener">Heady</a>
-                        <span class="spacing">by</span>
-                        <a href="https://www.onestowatch.com/en/blog/reaper-is-the-anti-hero-indie-needs"
-                            target="_blank" rel="noopener">Reaper</a>
+
+    <main>
+        <section>
+            <h2 class="genre">Indie:</h2>
+            <ul>
+                <li>
+                    <article class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://open.spotify.com/album/2v9Eny0s7E50ugTiFlCuUF" target="_blank"
+                                    rel="noopener">Heady</a>
+                                <span class="spacing">by</span>
+                                <a href="https://www.onestowatch.com/en/blog/reaper-is-the-anti-hero-indie-needs"
+                                    target="_blank" rel="noopener">Reaper</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe title="Heady by Reaper on Spotify" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/2v9Eny0s7E50ugTiFlCuUF?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Soul:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/1148987-Nick-Hakim-Where-Will-We-Go-Part-1-2"
+                                    target="_blank" rel="noopener">Where Will We Go Part 1 & 2</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Nick_Hakim" target="_blank" rel="noopener">Nick
+                                    Hakim</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/59WE3K5iltJMy9VA87aq7v?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/045GmXzU5nxXkpeD3w1eHc?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Nick_Hakim')">Show Summaries
+                        </button>
                     </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2v9Eny0s7E50ugTiFlCuUF?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Instrumental Hip-Hop:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/release/8868109-J-Dilla-The-King-Of-Beats"
+                                    target="_blank" rel="noopener">The King of Beats, Vol. 1</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/J_Dilla" target="_blank" rel="noopener">J
+                                    Dilla</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/27xemdV6LEuA82QUa0wW6d?utm_source=generator&theme=0"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('J_Dilla')">Show Summaries
+                        </button>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">R&B:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/471425-Frank-Ocean-Channel-Orange"
+                                    target="_blank" rel="noopener">Channel Orange</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Frank_Ocean" target="_blank" rel="noopener">Frank
+                                    Ocean</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/392p3shh2jkxUxY2VHvlH8?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <h2 class="genre">Soul:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/1148987-Nick-Hakim-Where-Will-We-Go-Part-1-2"
-                            target="_blank" rel="noopener">Where Will We Go Part 1 & 2</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Nick_Hakim" target="_blank" rel="noopener">Nick Hakim</a>
+                </li>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/release/25500877-Frank-Ocean-Blonde" target="_blank"
+                                    rel="noopener">Blonde</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Frank_Ocean" target="_blank" rel="noopener">Frank
+                                    Ocean</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Frank_Ocean')">Show Summaries
+                        </button>
                     </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/59WE3K5iltJMy9VA87aq7v?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/045GmXzU5nxXkpeD3w1eHc?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/357399-Ryan-Leslie-Ryan-Leslie" target="_blank"
+                                    rel="noopener">Ryan Leslie</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Ryan_Leslie" target="_blank" rel="noopener">Ryan
+                                    Leslie</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/7CONl4MQmQ6hezKe7CF0lh?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Ryan_Leslie')">Show Summaries
+                        </button>
                     </div>
-                </div>
-                <button class="summary-button tooltip" onclick="loadSummary('Nick_Hakim')">Show Summaries
-                    <span class="tooltiptext">Click to load summaries</span>
-                </button>
-            </div>
-        </li>
-    </ul>
-    <h2 class="genre">Instrumental Hip-Hop:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/8868109-J-Dilla-The-King-Of-Beats" target="_blank"
-                            rel="noopener">The King of Beats, Vol. 1</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/J_Dilla" target="_blank" rel="noopener">J Dilla</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Jazz:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/release/11868853-Stan-Getz-Jo%C3%A3o-Gilberto-Featuring-Antonio-Carlos-Jobim-Getz-Gilberto"
+                                    target="_blank" rel="noopener">Getz/Gilberto (Expanded edition)</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Stan_Getz" target="_blank" rel="noopener">Stan
+                                    Getz</a> &
+                                <a href="https://en.wikipedia.org/wiki/Jo%C3%A3o_Gilberto" target="_blank"
+                                    rel="noopener">João Gilberto</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/2W6Hvrtg2Zpc9dW4aBDbdP?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Stan_Getz')">Show Summaries
+                        </button>
                     </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px"
-                            src="https://open.spotify.com/embed/album/27xemdV6LEuA82QUa0wW6d?utm_source=generator&theme=0"
-                            width="100%" height="352" frameBorder="0" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            loading="lazy"></iframe>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Hip Hop, Pop:</h2>
+                <ul>
+                    <li>
+                        <div class="album-container">
+                            <div class="album-content">
+                                <div class="details">
+                                    <a href="https://www.discogs.com/master/1703470-Gambino-With-Jaden-The-Boy-Smith-Kauai"
+                                        target="_blank" rel="noopener">Kauai</a>
+                                    <span class="spacing">by</span>
+                                    <a href="https://en.wikipedia.org/wiki/Donald_Glover" target="_blank"
+                                        rel="noopener">Childish Gambino</a>
+                                </div>
+                                <div class="album-embed">
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/album/5GBcqixIFDPEom7AUNbFiM?utm_source=generator"
+                                        width="100%" height="352" frameBorder="0"
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </div>
+                            </div>
+                            <button class="summary-button tooltip" onclick="loadSummary('Childish_Gambino')">Show Summaries
+                            </button>
+                    </li>
+                </ul>
+        </section>
+        <section>
+            <h2 class="genre">Electronic, Funk / Soul, Pop:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/1038356-Honne-Warm-On-A-Cold-Night"
+                                    target="_blank" rel="noopener">Warm On A Cold Night</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Honne_(musical_duo)" target="_blank"
+                                    rel="noopener">Honne</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/6hmakfMxhTWYmSUed1HPFA?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Honne_(band)')">Show Summaries
+                        </button>
+                </li>
+            </ul>
+        </section>        
+        <section>
+            <h2 class="genre">Funk / Soul, Contemporary R&B:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/release/11006968-PJ-Morton-Gumbo" target="_blank"
+                                    rel="noopener">Gumbo</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/PJ_Morton" target="_blank" rel="noopener">PJ
+                                    Morton</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/7wAWsia8smE3scMtlO0nOx?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('PJ_Morton')">Show Summaries
+                        </button>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Hip Hop, Funk / Soul, Contemporary R&B:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/905839-The-Internet-Ego-Death" target="_blank"
+                                    rel="noopener">Ego Death</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/The_Internet_(band)" target="_blank"
+                                    rel="noopener">The Internet</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/69g3CtOVg98TPOwqmI2K7Q?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('The_Internet_(band)')">Show Summaries
+                        </button>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Instrumental Lo-Fi Beats:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/1073047-tomppabeats-Harbor-LP" target="_blank"
+                                    rel="noopener">Harbor</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Tomppabeats" target="_blank"
+                                    rel="noopener">tomppabeats</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/5HpYucXuCE8s379dUfpe3v?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Electronic, Hip Hop, Jazz:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/299354-Nujabes-Modal-Soul" target="_blank"
+                                    rel="noopener">Modal Soul</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Nujabes" target="_blank"
+                                    rel="noopener">Nujabes</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/6nVACH6a27eOWiumAJhDWS?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
                     </div>
-                </div>
-        </li>
-    </ul>
-    <h2 class="genre">R&B:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/471425-Frank-Ocean-Channel-Orange" target="_blank" rel="noopener">Channel Orange</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Frank_Ocean" target="_blank" rel="noopener">Frank Ocean</a>
+                </li>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/release/12639854-Nujabes-Metaphorical-Musicsam"
+                                    target="_blank" rel="noopener">Metaphorical Music</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Nujabes" target="_blank"
+                                    rel="noopener">Nujabes</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/5FrjDW96mCYw9ECc74c637?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Nujabes')">Show Summaries
+                        </button>
                     </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/392p3shh2jkxUxY2VHvlH8?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Indie Pop/Dream Pop:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/release/11927474-Hers-Songs-Of-Hers" target="_blank"
+                                    rel="noopener">Songs of Her's</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Her%27s" target="_blank" rel="noopener">Her's</a>
+                                <!-- Replace with a proper link if available -->
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/03gwRG5IvkStFnjPmgjElw?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Her%27s')">Show Summaries
+                        </button>
                     </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/25500877-Frank-Ocean-Blonde" target="_blank" rel="noopener">Blonde</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Frank_Ocean" target="_blank" rel="noopener">Frank Ocean</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Hip Hop:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/131421-Blu-Exile-Below-The-Heavens"
+                                    target="_blank" rel="noopener">Below the Heavens</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Blu_%26_Exile" target="_blank" rel="noopener">Blu
+                                    & Exile</a> <!-- Replace with a proper link if available -->
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/5svD0PDZ12uj3wTKkdBFMd?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Her% Blu_%26_Exile')">Show Summaries
+                        </button>
                     </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </li>    
-    </ul>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/357399-Ryan-Leslie-Ryan-Leslie" target="_blank" rel="noopener">Ryan Leslie</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Ryan_Leslie" target="_blank" rel="noopener">Ryan Leslie</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7CONl4MQmQ6hezKe7CF0lh?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <h2 class="genre">Jazz:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/11868853-Stan-Getz-Jo%C3%A3o-Gilberto-Featuring-Antonio-Carlos-Jobim-Getz-Gilberto" target="_blank" rel="noopener">Getz/Gilberto (Expanded edition)</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Stan_Getz" target="_blank" rel="noopener">Stan Getz</a> & 
-                        <a href="https://en.wikipedia.org/wiki/Jo%C3%A3o_Gilberto" target="_blank" rel="noopener">João Gilberto</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2W6Hvrtg2Zpc9dW4aBDbdP?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <h2 class="genre">Hip Hop, Pop:</div>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/1703470-Gambino-With-Jaden-The-Boy-Smith-Kauai" target="_blank" rel="noopener">Kauai</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Donald_Glover" target="_blank" rel="noopener">Childish Gambino</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5GBcqixIFDPEom7AUNbFiM?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>
-    </ul>
-    <h2 class="genre">Electronic, Funk / Soul, Pop:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/1038356-Honne-Warm-On-A-Cold-Night" target="_blank" rel="noopener">Warm On A Cold Night</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Honne_(musical_duo)" target="_blank" rel="noopener">Honne</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6hmakfMxhTWYmSUed1HPFA?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>
-    </ul>
-    <h2 class="genre">Funk / Soul, Contemporary R&B:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/11006968-PJ-Morton-Gumbo" target="_blank" rel="noopener">Gumbo</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/PJ_Morton" target="_blank" rel="noopener">PJ Morton</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7wAWsia8smE3scMtlO0nOx?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>
-    </ul>
-    <h2 class="genre">Hip Hop, Funk / Soul, Contemporary R&B:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/905839-The-Internet-Ego-Death" target="_blank" rel="noopener">Ego Death</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/The_Internet_(band)" target="_blank" rel="noopener">The Internet</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/69g3CtOVg98TPOwqmI2K7Q?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>
-    </ul>
-    <h2 class="genre">Rock:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/27090573-The-Symposium-drugs" target="_blank" rel="noopener">Drugs</a>                    
-                            <span class="spacing">by</span>
-                            <p>The Symposium</p>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/71Ji7GO6bfLFxRLFepA3IG?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>
-    </ul>
-    <h2 class="genre">Instrumental Lo-Fi Beats:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/1073047-tomppabeats-Harbor-LP" target="_blank" rel="noopener">Harbor</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Tomppabeats" target="_blank" rel="noopener">tomppabeats</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5HpYucXuCE8s379dUfpe3v?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>
-    </ul>
-    <h2 class="genre">Electronic, Hip Hop, Jazz:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/299354-Nujabes-Modal-Soul" target="_blank" rel="noopener">Modal Soul</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Nujabes" target="_blank" rel="noopener">Nujabes</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6nVACH6a27eOWiumAJhDWS?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/12639854-Nujabes-Metaphorical-Musicsam" target="_blank" rel="noopener">Metaphorical Music</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Nujabes" target="_blank" rel="noopener">Nujabes</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5FrjDW96mCYw9ECc74c637?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <h2 class="genre">Indie Pop/Dream Pop:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/11927474-Hers-Songs-Of-Hers" target="_blank" rel="noopener">Songs of Her's</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Her%27s" target="_blank" rel="noopener">Her's</a> <!-- Replace with a proper link if available -->
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/03gwRG5IvkStFnjPmgjElw?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <h2 class="genre">Hip Hop:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/131421-Blu-Exile-Below-The-Heavens" target="_blank" rel="noopener">Below the Heavens</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Blu_%26_Exile" target="_blank" rel="noopener">Blu & Exile</a> <!-- Replace with a proper link if available -->
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5svD0PDZ12uj3wTKkdBFMd?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/master/1212609-TylerCreator-Scum-Fuck-Flower-Boy" target="_blank" rel="noopener">Flower Boy</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Tyler,_the_Creator" target="_blank" rel="noopener">Tyler, The Creator</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2nkto6YNI4rUYTLqEwWJ3o?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>        
-    </ul>
-    <h2 class="genre">Electronic, Rock, Pop:</h2>
-    <ul>
-        <li>
-            <div class="album-container">
-                <div class="album-content">
-                    <div class="details">
-                        <a href="https://www.discogs.com/release/21133924-Still-Woozy-If-This-Isnt-Nice-I-Dont-Know-What-Is" target="_blank" rel="noopener">If This Isn't Nice, I Don't Know What Is</a>
-                        <span class="spacing">by</span>
-                        <a href="https://en.wikipedia.org/wiki/Still_Woozy" target="_blank" rel="noopener">Still Woozy</a>
-                    </div>
-                    <div class="album-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0QnWm07An8WyO3eupjBDoP?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </li>
-        </ul>
-                    
-    <div id="fixed-tooltip" class="fixed-tooltip">
-        <div id="tooltip-content">Click Show Summaries for more info</div>
-        <span class="close-button" onclick="closeTooltip()">&times;</span>
-    </div>
+                </li>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/master/1212609-TylerCreator-Scum-Fuck-Flower-Boy"
+                                    target="_blank" rel="noopener">Flower Boy</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Tyler,_the_Creator" target="_blank"
+                                    rel="noopener">Tyler, The Creator</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/2nkto6YNI4rUYTLqEwWJ3o?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Her% Blu_%Tyler,_the_Creator')">Show Summaries
+                        </button>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="genre">Electronic, Rock, Pop:</h2>
+            <ul>
+                <li>
+                    <div class="album-container">
+                        <div class="album-content">
+                            <div class="details">
+                                <a href="https://www.discogs.com/release/21133924-Still-Woozy-If-This-Isnt-Nice-I-Dont-Know-What-Is"
+                                    target="_blank" rel="noopener">If This Isn't Nice, I Don't Know What Is</a>
+                                <span class="spacing">by</span>
+                                <a href="https://en.wikipedia.org/wiki/Still_Woozy" target="_blank" rel="noopener">Still
+                                    Woozy</a>
+                            </div>
+                            <div class="album-embed">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/album/0QnWm07An8WyO3eupjBDoP?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <button class="summary-button tooltip" onclick="loadSummary('Still_Woozy')">Show Summaries
+                        </button>
+                </li>
+            </ul>
+        </section>
+        <div id="fixed-tooltip" class="fixed-tooltip">
+            <div id="tooltip-content">Click Show Summaries for more info</div>
+            <span class="close-button" onclick="closeTooltip()">&times;</span>
+        </div>
 </body>
 
 </html>

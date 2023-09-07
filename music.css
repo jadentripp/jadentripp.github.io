@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+/*     line-height: 1.6; */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header, .album-container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+main {
+    padding: 20px;
+}
+
+.genre {
+    margin: 20px 0 10px;
+    /* font-size: 1.5em; */
+}
+
+.album-container {
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.album-content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.details {
+    margin-bottom: 10px;
+}
+
+.details a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
+
+.album-embed iframe {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+.spacing {
+    margin: 0 5px;
+}
+
+.fixed-tooltip, #fixed-tooltip {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.fixed-tooltip .close-button, #fixed-tooltip .close-button {
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fixed-tooltip .close-button:hover, #fixed-tooltip .close-button:hover {
+    background-color: #0056b3;
+}
+
+#fixed-tooltip {
+    border: 1px solid #ccc;
+    max-width: 300px;
+    display: none;
+}
+
+#fixed-tooltip.display-block {
+    display: block;
+}
+
+#tooltip-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .album-content {
+        align-items: center;
+    }
+}

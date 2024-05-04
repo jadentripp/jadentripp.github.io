@@ -1,7 +1,7 @@
 function loadSummary(title1, title2) {
     const fixedTooltip = document.getElementById('fixed-tooltip');
     const contentDiv = document.getElementById('tooltip-content');
-    fixedTooltip.style.display = 'block'; // Reset display property
+    fixedTooltip.style.display = 'block'; 
     contentDiv.innerText = 'Loading summaries...';
 
     if (title2) {

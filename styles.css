@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +7,48 @@
   }
   
   body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Softer off-white */
+    color: #212529; /* Near-black for text */
     line-height: 1.6;
     padding: 20px;
   }
   
   header {
-    background: #2c3e50;
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    background: #34495e; /* Deep blue-gray */
+    color: #ecf0f1; /* Light gray for header text */
     padding: 20px;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .hero {
+    background-color: #34495e; /* Matches header */
+    color: #ecf0f1; /* Light text for contrast */
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
   }
   
   nav ul {
@@ -29,17 +59,19 @@
   
   nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 25px; /* Increased spacing */
   }
   
   nav ul li a {
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    color: #ecf0f1; /* Light gray for nav links */
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
   }
   
   nav ul li a:hover {
-    color: #3498db;
+    color: #ff7f50; /* Coral for primary accent on hover */
+    transform: translateY(-1px);
   }
   
   main {
@@ -47,12 +79,13 @@
   }
   
   .genre h2 {
-    background-color: #3498db;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ff7f50; /* Coral for primary accent */
     color: #fff;
     padding: 15px;
     margin-bottom: 30px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     font-size: 24px;
     text-transform: uppercase;
   }
@@ -62,9 +95,15 @@
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .book-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
   
   .book-image {
@@ -73,7 +112,7 @@
     width: 150px;
     height: auto;
     object-fit: cover;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
   
   .book-details {
@@ -83,18 +122,68 @@
   .book-title,
   .author-name {
     display: block;
-    color: #2980b9;
+    color: #5dade2; /* Muted blue for secondary accent */
     margin-bottom: 10px;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 20px;
   }
+
+  .book-title {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .author-name {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic; /* Keep italic style for author name */
+  }
   
   .book-title:hover,
   .author-name:hover {
-    color: #3498db;
+    color: #ff7f50; /* Coral for primary accent on hover */
+    text-decoration: underline;
+  }
+
+  .album-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .album-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .album-details a, .details a {
+    font-family: 'Montserrat', sans-serif;
+    color: #5dade2; /* Muted blue for secondary accent */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Added transition for color */
+    /* display: inline-block; /* Optional: if margin is needed */
+    /* margin-bottom: 5px; /* Optional: if margin is needed and display allows */
+  }
+
+  .album-details a:hover, .details a:hover {
+    color: #ff7f50; /* Coral for primary accent on hover */
+    text-decoration: underline;
   }
   
+  section#tools ul li a {
+    font-family: 'Montserrat', sans-serif;
+    color: #5dade2; /* Muted blue for secondary accent */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Added transition for color */
+  }
+
+  section#tools ul li a:hover {
+    color: #ff7f50; /* Coral for primary accent on hover */
+    text-decoration: underline;
+  }
+
   /* .summary-button {
     background-color: #3498db;
     color: #fff;
@@ -114,11 +203,11 @@
   footer {
     margin-top: 60px;
     text-align: center;
-    color: #777;
+    color: #ecf0f1; /* Match header text color */
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #34495e; /* Match header background */
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
   
 
@@ -129,5 +218,5 @@
     margin: 30px auto;
     max-width: 900px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }

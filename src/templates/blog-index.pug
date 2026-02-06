@@ -1,0 +1,33 @@
+extends layouts/default
+
+block content
+  section.content-page.reveal
+    header.page-header
+      p.kicker Essays
+      h1 Blog
+      p.hero-copy Thoughts on art, attention, and the craft of making.
+      p.label-tag Curated Section
+
+    if leadPost
+      article.feature-writing.blog-lead
+        a(href=u(leadPost.url))
+          img(
+            src=u(leadPost.cover_image)
+            alt=leadPost.cover_image_alt || `Cover image for ${leadPost.title}`
+            loading='eager'
+            decoding='async'
+            fetchpriority='high'
+            width=leadPost.cover_image_width
+            height=leadPost.cover_image_height
+          )
+          .feature-writing-copy
+            p.label-tag Lead Essay
+            h3= leadPost.title
+            p= leadPost.excerpt
+
+    if leadPost || otherPosts.length
+      section.grid.writing-grid.writing-grid-compact
+        each post in otherPosts
+          include partials/blog-card
+    else
+      p.collection-note No published writing yet.

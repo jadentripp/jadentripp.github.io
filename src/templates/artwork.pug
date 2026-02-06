@@ -1,0 +1,29 @@
+extends layouts/default
+
+block content
+  article.content-page.reveal
+    header.page-header
+      p.kicker Artwork
+      h1= artwork.title
+      p.meta #{artwork.medium} · #{artwork.dimensions} · #{formatYear(artwork.date)}
+      p.label-tag Gallery Label
+      if artwork.cover_image
+        img.hero-image(
+          src=u(artwork.cover_image)
+          alt=artwork.cover_image_alt || artwork.title
+          loading='eager'
+          decoding='async'
+          fetchpriority='high'
+          width=artwork.cover_image_width
+          height=artwork.cover_image_height
+        )
+
+    section.process-note
+      p.kicker Process Note
+      .prose
+        != artwork.content
+
+    if artwork.gallery && artwork.gallery.length
+      section.gallery-strip(aria-label=`${artwork.title} gallery`)
+        each image, idx in artwork.gallery
+          img(src=u(image) alt=`${artwork.title} detail ${idx + 1}` loading='lazy' decoding='async')

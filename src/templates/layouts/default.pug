@@ -1,0 +1,35 @@
+doctype html
+html(lang=site.lang)
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title #{pageTitle} | #{site.title}
+    meta(name='description' content=pageDescription || site.description)
+    - const canonical = new URL(u(canonicalPath || '/'), site.url).toString()
+    - const ogImage = socialImage ? new URL(u(socialImage), site.url).toString() : null
+    meta(property='og:site_name' content=site.title)
+    meta(property='og:title' content=`${pageTitle} | ${site.title}`)
+    meta(property='og:description' content=pageDescription || site.description)
+    meta(property='og:type' content=ogType || 'website')
+    meta(property='og:url' content=canonical)
+    if ogImage
+      meta(property='og:image' content=ogImage)
+      meta(name='twitter:image' content=ogImage)
+    meta(name='twitter:card' content=ogImage ? 'summary_large_image' : 'summary')
+    meta(name='twitter:title' content=`${pageTitle} | ${site.title}`)
+    meta(name='twitter:description' content=pageDescription || site.description)
+    link(rel='canonical' href=canonical)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,700&family=Manrope:wght@400;500;700&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href=u('/assets/css/main.css'))
+  body
+    a.skip-link(href='#main-content') Skip to main content
+    .atmosphere-layer.atmosphere-layer-a(aria-hidden='true')
+    .atmosphere-layer.atmosphere-layer-b(aria-hidden='true')
+    .noise-overlay(aria-hidden='true')
+    include ../partials/header
+    main#main-content
+      block content
+    include ../partials/footer
+    script(src=u('/assets/js/site.js') defer)

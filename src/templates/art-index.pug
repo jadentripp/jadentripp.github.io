@@ -1,0 +1,24 @@
+extends layouts/default
+
+block content
+  section.content-page.reveal
+    header.page-header
+      p.kicker Selected Work
+      h1 Art
+      p.hero-copy Paintings, studies, and process fragments.
+      p.label-tag Curated Section
+
+    p.collection-note Each piece includes a short process note and detail views.
+
+    if artworks.length
+      .filter-row(role='group' aria-label='Filter artworks by tag')
+        button.filter-btn.is-active(type='button' data-filter='all' aria-pressed='true') All
+        each tag in artTags
+          button.filter-btn(type='button' data-filter=tag aria-pressed='false')= tag.charAt(0).toUpperCase() + tag.slice(1)
+      p#art-filter-status.sr-only(aria-live='polite')
+
+      section#art-grid.grid.art-grid
+        each artwork in artworks
+          include partials/art-card
+    else
+      p.collection-note No published artwork yet.

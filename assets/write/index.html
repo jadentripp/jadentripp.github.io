@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Write | Studio Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/write/write.css" />
+  </head>
+  <body>
+    <div class="bg-layer bg-layer-a" aria-hidden="true"></div>
+    <div class="bg-layer bg-layer-b" aria-hidden="true"></div>
+
+    <main class="writer-shell">
+      <header class="topbar">
+        <div>
+          <p class="kicker">Local Authoring</p>
+          <h1>Write a New Blog Post</h1>
+        </div>
+        <div class="topbar-actions">
+          <a href="/blog/" target="_blank" rel="noreferrer">View blog</a>
+          <button id="clear-draft" type="button" class="ghost">Clear draft</button>
+          <button id="publish" type="button" class="accent">Publish</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <div class="panel editor-panel">
+          <form id="writer-form" novalidate>
+            <div class="meta-grid">
+              <label>
+                <span>Title</span>
+                <input id="title" name="title" type="text" placeholder="A short, clear title" required />
+              </label>
+
+              <label>
+                <span>Date</span>
+                <input id="date" name="date" type="date" />
+              </label>
+
+              <label>
+                <span>Slug</span>
+                <input id="slug" name="slug" type="text" placeholder="auto-generated-from-title" />
+              </label>
+
+              <label>
+                <span>Tags (comma separated)</span>
+                <input id="tags" name="tags" type="text" placeholder="process, studio, writing" />
+              </label>
+            </div>
+
+            <label>
+              <span>Excerpt</span>
+              <textarea id="excerpt" name="excerpt" rows="3" placeholder="One sentence for blog cards." required></textarea>
+              <small id="excerpt-count">0 characters</small>
+            </label>
+
+            <label>
+              <span>Cover Image</span>
+              <div class="cover-row">
+                <input id="cover_image" name="cover_image" type="text" placeholder="/assets/images/your-cover.jpg" />
+                <label class="upload-button" for="cover-upload">Upload</label>
+                <input id="cover-upload" type="file" accept="image/*" hidden />
+              </div>
+            </label>
+
+            <label class="checkbox-row">
+              <input id="published" name="published" type="checkbox" checked />
+              <span>Published</span>
+            </label>
+
+            <div id="dropzone" class="dropzone" tabindex="0">
+              Drop an image here to upload and insert into markdown.
+            </div>
+
+            <label>
+              <span>Markdown</span>
+              <textarea id="markdown" name="markdown" rows="20" placeholder="Start writing here..." required></textarea>
+            </label>
+          </form>
+
+          <div class="status-row">
+            <p id="status">Draft not saved yet.</p>
+            <p class="hint">Shortcuts: Ctrl/Cmd+S save draft, Ctrl/Cmd+Enter publish.</p>
+          </div>
+
+          <ul id="errors" class="errors" aria-live="polite"></ul>
+        </div>
+
+        <aside class="panel preview-panel">
+          <div class="preview-head">
+            <h2>Live Preview</h2>
+            <button id="validate" type="button" class="ghost">Validate</button>
+          </div>
+          <article id="preview" class="preview-prose">
+            <p class="placeholder">Preview updates as you type.</p>
+          </article>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/assets/write/write.js" defer></script>
+  </body>
+</html>

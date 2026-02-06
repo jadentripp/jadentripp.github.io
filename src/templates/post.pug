@@ -1,0 +1,25 @@
+extends layouts/default
+
+block content
+  article.content-page.reveal
+    header.page-header
+      p.kicker Essay
+      h1= post.title
+      p.meta= formatDate(post.date, 'long')
+      p.label-tag Notebook Entry
+      if post.tags && post.tags.length
+        ul.tags(aria-label='Post tags')
+          each tag in post.tags
+            li= tag
+      if post.cover_image
+        img.hero-image(
+          src=u(post.cover_image)
+          alt=post.cover_image_alt || `Cover image for ${post.title}`
+          loading='eager'
+          decoding='async'
+          fetchpriority='high'
+          width=post.cover_image_width
+          height=post.cover_image_height
+        )
+    .prose
+      != post.content

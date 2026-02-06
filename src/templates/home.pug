@@ -1,0 +1,83 @@
+extends layouts/default
+
+block content
+  section.hero.reveal
+    div
+      p.kicker Writer + Visual Artist
+      h1= home.hero_title
+    aside.hero-side
+      p.label-tag About this site
+      p.hero-copy= home.hero_copy
+      p.hero-links
+        a(href=u('/art/')) Browse art
+        span(aria-hidden='true') ·
+        a(href=u('/blog/')) Browse blog
+
+  if featuredPost || secondaryPosts.length
+    section.section.reveal
+      .section-head
+        div
+          p.label-tag Shelf A
+          h2 Latest Writing
+        a(href=u('/blog/')) View all
+
+      if featuredPost
+        article.feature-writing
+          a(href=u(featuredPost.url))
+            img(
+              src=u(featuredPost.cover_image)
+              alt=featuredPost.cover_image_alt || `Cover image for ${featuredPost.title}`
+              loading='eager'
+              decoding='async'
+              fetchpriority='high'
+              width=featuredPost.cover_image_width
+              height=featuredPost.cover_image_height
+            )
+            .feature-writing-copy
+              p.meta= formatDate(featuredPost.date, 'long')
+              h3= featuredPost.title
+              p= featuredPost.excerpt
+
+      .grid.writing-grid.writing-grid-compact
+        each post in secondaryPosts
+          include partials/blog-card
+
+  if featuredArt || secondaryArt.length
+    section.section.reveal
+      .section-head
+        div
+          p.label-tag Shelf B
+          h2 Featured Art
+        a(href=u('/art/')) View all
+
+      if featuredArt
+        article.feature-art
+          a(href=u(featuredArt.url))
+            img(
+              src=u(featuredArt.cover_image)
+              alt=featuredArt.cover_image_alt || featuredArt.title
+              loading='lazy'
+              decoding='async'
+              width=featuredArt.cover_image_width
+              height=featuredArt.cover_image_height
+            )
+          .feature-art-copy
+            p.label-tag Gallery Label 02
+            h3
+              a(href=u(featuredArt.url))= featuredArt.title
+            p #{featuredArt.medium} · #{featuredArt.dimensions}
+
+      .grid.art-grid
+        each artwork in secondaryArt
+          include partials/art-card
+
+  if !featuredPost && !secondaryPosts.length && !featuredArt && !secondaryArt.length
+    section.section.reveal
+      .section-head
+        div
+          p.label-tag Status
+          h2 No published entries yet
+      p.collection-note
+        | New essays and artwork will appear here as they are published.
+      p.hero-links
+        a(href='https://x.com' rel='noreferrer noopener') X

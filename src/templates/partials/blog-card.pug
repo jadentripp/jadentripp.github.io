@@ -1,0 +1,15 @@
+article.card.card-writing.reveal
+  a(href=u(post.url))
+    if post.cover_image
+      img(
+        src=u(post.cover_image)
+        alt=post.cover_image_alt || `Cover image for ${post.title}`
+        loading='lazy'
+        decoding='async'
+        width=post.cover_image_width
+        height=post.cover_image_height
+      )
+    .card-body
+      p.meta= formatDate(post.date, 'short')
+      h3= post.title
+      p= post.excerpt

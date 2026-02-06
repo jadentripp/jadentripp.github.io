@@ -1,0 +1,14 @@
+article.card.card-art.reveal(data-tags=(artwork.tags || []).join(',').toLowerCase())
+  a(href=u(artwork.url))
+    if artwork.cover_image
+      img(
+        src=u(artwork.cover_image)
+        alt=artwork.cover_image_alt || artwork.title
+        loading='lazy'
+        decoding='async'
+        width=artwork.cover_image_width
+        height=artwork.cover_image_height
+      )
+    .card-body
+      h3= artwork.title
+      p= artwork.medium

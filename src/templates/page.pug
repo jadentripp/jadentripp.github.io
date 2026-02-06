@@ -1,0 +1,13 @@
+extends layouts/default
+
+block content
+  section.content-page.reveal
+    header.page-header
+      if page.kicker
+        p.kicker= page.kicker
+      h1= page.title
+      if page.intro
+        p.hero-copy= page.intro
+      p.label-tag Curated Section
+    .prose
+      != page.content

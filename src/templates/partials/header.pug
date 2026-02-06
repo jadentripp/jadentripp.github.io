@@ -5,6 +5,7 @@ header.site-header
   nav(aria-label='Primary')
     a(href=u('/blog/')) Blog
     a(href=u('/art/')) Art
-    a(href=u('/write')) Write
+    if site.showWriteLink
+      a(href=u('/write')) Write
     a(href=u('/about/')) About
     a(href=u('/contact/')) Contact

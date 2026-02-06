@@ -34,6 +34,10 @@ const liveReloadSnippet = `
 
 const build = async () => {
   const proc = Bun.spawn(["bun", "run", "scripts/build.ts"], {
+    env: {
+      ...process.env,
+      LOCAL_DEV: writerEnabled ? "true" : "false"
+    },
     stdout: "inherit",
     stderr: "inherit"
   });
